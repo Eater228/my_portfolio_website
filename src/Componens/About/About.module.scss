@@ -1,0 +1,118 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  padding-top: var(--nav-height);
+  min-height: calc(100vh - var(--nav-height));
+  // background-color: #f8f9fa;
+
+  // padding-bottom: 4rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  // color: #2c3e50;
+  margin-bottom: 2rem;
+  // border-left: 5px solid #3498db;
+  padding-left: 1rem;
+  // align-self: flex-start;
+}
+
+.content {
+  // flex: ;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 4rem 0;
+  // text-align: center;
+}
+
+.text {
+  max-width: 80%;
+  font-size: 1.5rem;
+  // line-height: 1.6;
+  // color: #333;
+  // margin-bottom: 1.5rem;
+  // padding: 0 1rem;
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .text {
+    font-size: 1rem;
+  }
+}
+
+.cvContainer {
+  padding: 0 2rem;
+}
+
+.cvCard {
+  display: flex;
+  align-items: center;
+  // justify-content: space-between;
+  gap: 1.5rem;
+  background-color: var(--main-red);
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(73, 3, 3, 0.1);
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: var(--main-gray);
+
+  // ширина на весь контейнер + бокові відступи
+  // width: 100%;
+  box-sizing: border-box;
+  // margin: 2rem 1rem; // відступи з краю екрана
+  margin: 0 100px;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.cvImage {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+  background-color: #eee;
+  flex-shrink: 0;
+}
+
+.cvInfo {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.cvText {
+  h3 {
+    font-size: 1.75rem;
+    margin: 0 0 0.5rem;
+  }
+
+  p {
+    font-size: 1rem;
+    color: var(--main-white);
+    margin: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .cvCard {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .cvImage {
+    width: 100px;
+    height: 100px;
+  }
+}
