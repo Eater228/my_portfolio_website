@@ -12,6 +12,7 @@
   --main-gray: #303841;
   --nav-height: 60px;
   font-family: "Intel One Mono", monospace;
+  height: 100%;
 }
 
 h2 {
